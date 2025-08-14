@@ -10,17 +10,70 @@
 
 </head>
 <body>
-    <header>
+    <header class="flex items-center justify-between p-4">
+        <!-- logo icon -->
+        <div class="bg-yellow-100 rounded-full h-[50px] w-[50px] main-logo"></div>
 
+        <nav>
+            <ul class="flex gap-[8px]">
+                <li><a href="#home-page"
+                    class="text-gray-700 border py-[4px] px-[8px] hover:text-blue-400">Home</a></li>
+                <li><a href="#our-profile"
+                    class="text-gray-700 border py-[4px] px-[8px] hover:text-blue-400">Our Profile</a></li>
+                <li><a href="#portofolio" 
+                    class="text-gray-700 border py-[4px] px-[8px] hover:text-blue-400">Portofolio</a></li>
+                <li><a href="#message-us" 
+                    class="text-gray-700 border py-[4px] px-[8px] hover:text-blue-400">Message</a></li>
+
+            </ul>
+        </nav>
     </header>
 
     <main>
+        <!-- Home Page -->
+        <section id="home-page" class="h-[400px] bg-gray-100">
+            <div class="flex items-center justify-center h-full">
+                <h1 class="text-4x1 font-bold text-gray-700">Welcome <span id="user-greeting">User</span> to Portofolio Naila</h1>
+            </div>
+        </section>
 
+        <hr>
+        <!-- Our Profile -->
+        <section id="our-profile" class="h-[400px] bg-gray-100">
+            <header>
+                <h1 class="text-4x1 font-bold text-gray-700">Our Profile</h1>
+            </header>
+
+            <p class="text-gray-700">We are a team of passionate individual dedicated to delivering</p>
+        </section>
+
+        <hr>
+        <!-- Porto -->
+        <section id="portofolio" class="h-[400px] bg-gray-100">
+            <header>
+                <h1 class="text-4x1 font-bold text-gray-700">Portofolio</h1>
+            </header>
+
+            <p class="text-gray-700">We are a team of passionate individual dedicated to delivering</p>
+        </section>
+
+        <hr>
+        <!-- Message us -->
+        <section>
+            <header>
+                <h1>Message Us</h1>
+            </header>
+            <form action="">
+                <label for="user-message" class="block text-gray-700">Your Message:</label>
+                <input id="user-message" type="text" class="border rounded-md w-full p-2">
+                <button type="button" onclick="sendMessage();" class="mt-2 bg-blue-500 text-white py-2 px-4 reunded-md">Send</button>
+            </form>
+        </section>
     </main>
 
     <!-- footer -->
     <footer>
-
+        <span>&copy; 2025 Portofolio Naila. All rigths reservedcopyright by naila</span>
     </footer>
     <script src="js/script.js"></script>
 </body>
