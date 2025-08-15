@@ -1,80 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>miniproject by naila</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- css tailwind -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pixel Art Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header class="flex items-center justify-between p-4">
-        <!-- logo icon -->
-        <div class="bg-yellow-100 rounded-full h-[50px] w-[50px] main-logo"></div>
+<body class="text-black">
 
-        <nav>
-            <ul class="flex gap-[8px]">
-                <li><a href="#home-page"
-                    class="text-gray-700 border py-[4px] px-[8px] hover:text-blue-400">Home</a></li>
-                <li><a href="#our-profile"
-                    class="text-gray-700 border py-[4px] px-[8px] hover:text-blue-400">Our Profile</a></li>
-                <li><a href="#portofolio" 
-                    class="text-gray-700 border py-[4px] px-[8px] hover:text-blue-400">Portofolio</a></li>
-                <li><a href="#message-us" 
-                    class="text-gray-700 border py-[4px] px-[8px] hover:text-blue-400">Message</a></li>
+  <!-- Navbar -->
+  <nav class="bg-yellow-300 border-b-4 border-black fixed w-full top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <span class="text-xl">🎮 My Pixel Game</span>
+      <ul class="flex gap-4">
+        <li><a href="#home" class="pixel-hover p-2">Home</a></li>
+        <li><a href="#profile" class="pixel-hover p-2">Profile</a></li>
+        <li><a href="#portfolio" class="pixel-hover p-2">Portfolio</a></li>
+        <li><a href="#contact" class="pixel-hover p-2">Message Us</a></li>
+      </ul>
+    </div>
+  </nav>
 
-            </ul>
-        </nav>
-    </header>
+  <!-- Home -->
+  <section id="home" class="fade-in min-h-screen flex flex-col items-center justify-center text-center pt-20">
+    <h1 class="text-3xl mb-4">Hi, I'm Naila</h1>
+    <p class="max-w-xl">I create retro-style games with pixel art aesthetics.</p>
+    <button class="mt-6 pixel-hover p-3 border-4 border-black">Explore My Work</button>
+  </section>
 
-    <main>
-        <!-- Home Page -->
-        <section id="home-page" class="h-[400px] bg-gray-100">
-            <div class="flex items-center justify-center h-full">
-                <h1 class="text-4x1 font-bold text-gray-700">Welcome <span id="user-greeting">User</span> to Portofolio Naila</h1>
-            </div>
-        </section>
+  <!-- Profile -->
+  <section id="profile" class="fade-in min-h-screen flex flex-col items-center justify-center bg-green-200 border-t-4 border-black p-10">
+    <img src="img/image.png" alt="Profile Pixel" class="w-32 h-32 pixel-border mb-4">
+    <p class="max-w-lg">I’m an indie game developer passionate about making fun and nostalgic experiences using pixel art. My work blends retro charm with modern gameplay mechanics.</p>
+  </section>
 
-        <hr>
-        <!-- Our Profile -->
-        <section id="our-profile" class="h-[400px] bg-gray-100">
-            <header>
-                <h1 class="text-4x1 font-bold text-gray-700">Our Profile</h1>
-            </header>
+  <!-- Portfolio -->
+  <section id="portfolio" class="fade-in min-h-screen bg-blue-200 border-t-4 border-black p-10">
+    <h2 class="text-2xl text-center mb-8">My Pixel Games</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="pixel-border p-2 bg-white pixel-hover">
+        <img src="game1.png" alt="Game 1" class="w-full">
+        <p class="mt-2 text-sm">Save the Energy - Educational Puzzle Game</p>
+      </div>
+      <div class="pixel-border p-2 bg-white pixel-hover">
+        <img src="game2.png" alt="Game 2" class="w-full">
+        <p class="mt-2 text-sm">Maze Adventure - Collect items and solve quizzes</p>
+      </div>
+      <div class="pixel-border p-2 bg-white pixel-hover">
+        <img src="game3.png" alt="Game 3" class="w-full">
+        <p class="mt-2 text-sm">Retro Quest - RPG pixel experience</p>
+      </div>
+    </div>
+  </section>
 
-            <p class="text-gray-700">We are a team of passionate individual dedicated to delivering</p>
-        </section>
+  <!-- Message Us -->
+  <section id="contact" class="fade-in min-h-screen flex flex-col items-center justify-center bg-pink-200 border-t-4 border-black p-10">
+    <h2 class="text-2xl mb-6">Message Us</h2>
+    <form class="flex flex-col gap-4 w-full max-w-md">
+      <input type="text" placeholder="Your Name" class="p-3 border-4 border-black pixel-hover">
+      <input type="email" placeholder="Your Email" class="p-3 border-4 border-black pixel-hover">
+      <textarea placeholder="Your Message" class="p-3 border-4 border-black pixel-hover"></textarea>
+      <button type="submit" class="p-3 bg-yellow-300 border-4 border-black pixel-hover">Send</button>
+    </form>
+  </section>
 
-        <hr>
-        <!-- Porto -->
-        <section id="portofolio" class="h-[400px] bg-gray-100">
-            <header>
-                <h1 class="text-4x1 font-bold text-gray-700">Portofolio</h1>
-            </header>
-
-            <p class="text-gray-700">We are a team of passionate individual dedicated to delivering</p>
-        </section>
-
-        <hr>
-        <!-- Message us -->
-        <section>
-            <header>
-                <h1>Message Us</h1>
-            </header>
-            <form action="">
-                <label for="user-message" class="block text-gray-700">Your Message:</label>
-                <input id="user-message" type="text" class="border rounded-md w-full p-2">
-                <button type="button" onclick="sendMessage();" class="mt-2 bg-blue-500 text-white py-2 px-4 reunded-md">Send</button>
-            </form>
-        </section>
-    </main>
-
-    <!-- footer -->
-    <footer>
-        <span>&copy; 2025 Portofolio Naila. All rigths reservedcopyright by naila</span>
-    </footer>
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

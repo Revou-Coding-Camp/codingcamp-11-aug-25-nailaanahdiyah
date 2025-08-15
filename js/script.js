@@ -1,17 +1,24 @@
-console.log("script jalan");
-// pop up nama
-function welcomeSpeech(){
-    let user_name = prompt("What is your name?");
-    if (user_name != " "){
-        document.getElementById('user-greeting').textContent = user_name;
-    }
-}
+// Animasi fade-in saat scroll
+const faders = document.querySelectorAll('.fade-in');
 
-function sendMessage(){
-    let message = document.getElementById('user-message').value;
-    if (message != '') {
-        alert('Message sent: ' + message);
-    } else {
-        alert('please enter a message before sending');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
     }
-}
+  });
+}, { threshold: 0.1 });
+
+faders.forEach(fade => observer.observe(fade));
+
+// Cek apakah gambar background termuat
+const bgImg = new Image();
+bgImg.src = 'img/pixel-background.png';
+
+bgImg.onload = function() {
+    console.log('%c✅ Background pixel art berhasil dimuat!', 'color: green; font-weight: bold;');
+};
+
+bgImg.onerror = function() {
+    console.error('❌ Background pixel art gagal dimuat! Periksa path atau nama file.');
+};

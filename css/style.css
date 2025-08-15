@@ -1,6 +1,43 @@
-.main-logo{
-    background-image: url('../img/image.png');
-    width: 200px;
-    background-size: cover;
-    background-position: center 28%;
+body {
+  font-family: 'Press Start 2P', cursive;
+  background: #fce9cc url('../img/pixel-background.png') repeat;
+  /* background-size: 64px 64px; */
+  animation: moveBackground 60s linear infinite;
+}
+
+/* Background awan pixel bergerak */
+@keyframes moveBackground {
+  from { background-position: 0 0; }
+  to { background-position: -512px 0; }
+}
+
+.pixel-border {
+  image-rendering: pixelated;
+  border: 4px solid #000;
+}
+
+/* Tombol hover bergetar */
+.pixel-hover:hover {
+  background-color: #ffe18d;
+  box-shadow: 0 0 0 4px #000 inset;
+  animation: pixelShake 0.2s infinite;
+}
+
+@keyframes pixelShake {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(1px, 0); }
+  50% { transform: translate(0, 1px); }
+  75% { transform: translate(-1px, 0); }
+}
+
+/* Fade-in untuk section */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
 }
