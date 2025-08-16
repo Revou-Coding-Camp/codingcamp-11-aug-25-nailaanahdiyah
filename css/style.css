@@ -16,6 +16,11 @@ body {
   z-index: 100;
 }
 
+/* biar ga ketutupan navbar */
+section {
+    scroll-margin-top: 40px;
+}
+
 /* moving bg */
 @keyframes moveBackground {
   from { background-position: 0 0; }
