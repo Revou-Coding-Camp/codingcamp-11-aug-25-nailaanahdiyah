@@ -5,6 +5,18 @@ body {
   animation: moveBackground 60s linear infinite;
 }
 
+.main-logo {
+  background-image: url('../img/image.png');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  /* top: 10px; */
+  left: 20px;
+  z-index: 100;
+}
+
 /* Background awan pixel bergerak */
 @keyframes moveBackground {
   from { background-position: 0 0; }
@@ -16,18 +28,9 @@ body {
   border: 4px solid #000;
 }
 
-/* Tombol hover bergetar */
 .pixel-hover:hover {
   background-color: #ffe18d;
   box-shadow: 0 0 0 4px #000 inset;
-  animation: pixelShake 0.2s infinite;
-}
-
-@keyframes pixelShake {
-  0%, 100% { transform: translate(0, 0); }
-  25% { transform: translate(1px, 0); }
-  50% { transform: translate(0, 1px); }
-  75% { transform: translate(-1px, 0); }
 }
 
 /* Fade-in untuk section */

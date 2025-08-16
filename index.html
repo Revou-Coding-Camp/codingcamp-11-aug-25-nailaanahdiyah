@@ -1,71 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pixel Art Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naila's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="text-black">
 
-  <!-- Navbar -->
-  <nav class="bg-yellow-300 border-b-4 border-black fixed w-full top-0 z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-      <span class="text-xl">🎮 My Pixel Game</span>
-      <ul class="flex gap-4">
-        <li><a href="#home" class="pixel-hover p-2">Home</a></li>
-        <li><a href="#profile" class="pixel-hover p-2">Profile</a></li>
-        <li><a href="#portfolio" class="pixel-hover p-2">Portfolio</a></li>
-        <li><a href="#contact" class="pixel-hover p-2">Message Us</a></li>
-      </ul>
-    </div>
-  </nav>
+    <!-- logo icon -->
+    <div class="bg-gray-500 rounded-full h-[50px] w-[50px] main-logo"></div>
 
-  <!-- Home -->
-  <section id="home" class="fade-in min-h-screen flex flex-col items-center justify-center text-center pt-20">
-    <h1 class="text-3xl mb-4">Hi, I'm Naila</h1>
-    <p class="max-w-xl">I create retro-style games with pixel art aesthetics.</p>
-    <button class="mt-6 pixel-hover p-3 border-4 border-black">Explore My Work</button>
-  </section>
+    <!-- navbar -->
+    <nav class="bg-yellow-300 border-b-4 border-black fixed w-full top-0 z-50">
+        <div class="max-w-6xl mx-auto flex justify-end items-center p-4">
+            <ul class="flex gap-4">
+                <li><a href="#home" class="pixel-hover p-2">Home</a></li>
+                <li><a href="#profile" class="pixel-hover p-2">Profile</a></li>
+                <li><a href="#portfolio" class="pixel-hover p-2">Portfolio</a></li>
+                <li><a href="#message" class="pixel-hover p-2">Message Us</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <!-- Profile -->
-  <section id="profile" class="fade-in min-h-screen flex flex-col items-center justify-center bg-green-200 border-t-4 border-black p-10">
-    <img src="img/image.png" alt="Profile Pixel" class="w-32 h-32 pixel-border mb-4">
-    <p class="max-w-lg">I’m an indie game developer passionate about making fun and nostalgic experiences using pixel art. My work blends retro charm with modern gameplay mechanics.</p>
-  </section>
+    <main>
+        <!-- home -->
+        <section id="home" class="fade-in min-h-screen flex flex-col items-center justify-center text-center pt-20">
+            <h1 class="text-3xl mb-4">Hi <span id="user-greeting"></span>!, I'm Naila</h1>
+            <p class="max-w-xl">I create user interface for game.</p>
+            <a href="#portfolio"><button class="mt-6 pixel-hover p-3 border-4 border-black">Explore My Work</button></a>
+        </section>
 
-  <!-- Portfolio -->
-  <section id="portfolio" class="fade-in min-h-screen bg-blue-200 border-t-4 border-black p-10">
-    <h2 class="text-2xl text-center mb-8">My Pixel Games</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="pixel-border p-2 bg-white pixel-hover">
-        <img src="game1.png" alt="Game 1" class="w-full">
-        <p class="mt-2 text-sm">Save the Energy - Educational Puzzle Game</p>
-      </div>
-      <div class="pixel-border p-2 bg-white pixel-hover">
-        <img src="game2.png" alt="Game 2" class="w-full">
-        <p class="mt-2 text-sm">Maze Adventure - Collect items and solve quizzes</p>
-      </div>
-      <div class="pixel-border p-2 bg-white pixel-hover">
-        <img src="game3.png" alt="Game 3" class="w-full">
-        <p class="mt-2 text-sm">Retro Quest - RPG pixel experience</p>
-      </div>
-    </div>
-  </section>
+        <!-- profile -->
+        <section id="profile"
+            class="fade-in min-h-screen flex flex-col items-center justify-center bg-green-200 border-t-4 border-black p-10">
+            <img src="img/image.png" alt="Profile Pixel" class="w-32 h-32 pixel-border mb-4">
+            <p class="max-w-lg text-center">I’m an indie <span class="line-through">game developer</span></p>
+            <p class="max-w-lg text-center p-10">No, I'm not a game developer, but I do UI/UX Design for game, making background music, and sound effects. Still a begineer, but every project I do is a journey I truly enjoy.</p>
+        </section>
 
-  <!-- Message Us -->
-  <section id="contact" class="fade-in min-h-screen flex flex-col items-center justify-center bg-pink-200 border-t-4 border-black p-10">
-    <h2 class="text-2xl mb-6">Message Us</h2>
-    <form class="flex flex-col gap-4 w-full max-w-md">
-      <input type="text" placeholder="Your Name" class="p-3 border-4 border-black pixel-hover">
-      <input type="email" placeholder="Your Email" class="p-3 border-4 border-black pixel-hover">
-      <textarea placeholder="Your Message" class="p-3 border-4 border-black pixel-hover"></textarea>
-      <button type="submit" class="p-3 bg-yellow-300 border-4 border-black pixel-hover">Send</button>
-    </form>
-  </section>
+        <!-- portfolio -->
+        <section id="portfolio" class="fade-in min-h-screen bg-blue-200 border-t-4 border-black p-10">
+            <h2 class="text-2xl text-center mb-8">My Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="pixel-border p-2 bg-white pixel-hover">
+                    <img src="img/game1.png" alt="Game 1" class="w-full">
+                    <p class="mt-2 text-sm">Game UI - Blusukan</p>
+                </div>
+                <div class="pixel-border p-2 bg-white pixel-hover">
+                    <a href="https://thefarmers.itch.io/watch-your-back-train-surfing" target="_blank" rel="noopener noreferrer">
+                        <img src="img/game2.png" alt="Game 2" class="w-full">
+                        <p class="mt-2 text-sm">Watch Your Back! - Train Surfer</p>
+                        <p class="text-[9px] pt-20">you can click this, hehe</p>
+                    </a>
+                </div>
+                <div class="pixel-border p-2 bg-white pixel-hover">
+                    <img src="img/game3.png" alt="Game 3" class="w-full">
+                    <p class="mt-2 text-sm">Game UI - Save the Energy</p>
+                    <p class="text-[9px]">My thesis project, haha!</p>
+                </div>
+            </div>
+        </section>
 
-  <script src="js/script.js"></script>
+        <section id="message" class="p-8 bg-white">
+            <h2 class="text-2xl font-bold mb-4">Message Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Form -->
+                <form id="messageForm" class="space-y-4 bg-gray-100 p-4 rounded pixel-border">
+                    <div>
+                        <label class="block mb-1 font-bold">Nama</label>
+                        <input type="text" id="name" class="w-full p-2 border rounded" required>
+                    </div>
+                    <div>
+                        <label class="block mb-1 font-bold">Pesan</label>
+                        <textarea id="messageText" class="w-full p-2 border rounded" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="px-4 py-2 bg-yellow-300 pixel-hover rounded">
+                        Kirim
+                    </button>
+                </form>
+
+                <!-- Hasil Pesan -->
+                <div id="messageResult" class="bg-gray-50 p-4 rounded pixel-border">
+                    <h3 class="font-bold mb-2">Pesan Terkirim:</h3>
+                    <ul id="messageList" class="space-y-2 text-sm">
+                        <!-- nanti muncul sini -->
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    
+    <!-- footer -->
+     <footer>
+        <span>&copy; 2025 Portfolio Naila. All Rights Reserved</span>
+     </footer>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
