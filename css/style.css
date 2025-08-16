@@ -1,7 +1,6 @@
 body {
   font-family: 'Press Start 2P', cursive;
   background: #fce9cc url('../img/pixel-background.png') repeat;
-  /* background-size: 64px 64px; */
   animation: moveBackground 60s linear infinite;
 }
 
@@ -12,12 +11,12 @@ body {
   position: fixed;
   width: 50px;
   height: 50px;
-  /* top: 10px; */
+  top: 3px;
   left: 20px;
   z-index: 100;
 }
 
-/* Background awan pixel bergerak */
+/* moving bg */
 @keyframes moveBackground {
   from { background-position: 0 0; }
   to { background-position: -512px 0; }
@@ -33,7 +32,7 @@ body {
   box-shadow: 0 0 0 4px #000 inset;
 }
 
-/* Fade-in untuk section */
+/* transisi section */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);

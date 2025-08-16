@@ -6,56 +6,57 @@ function welcomeSpeech() {
   }
 }
 
+//message form handling
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("messageForm");
-  const nameInput = document.getElementById("name");
-  const messageInput = document.getElementById("messageText");
-  const messageList = document.getElementById("messageList");
+    const form = document.getElementById("messageForm");
+    const nameInput = document.getElementById("name");
+    const messageInput = document.getElementById("messageText");
+    const messageList = document.getElementById("messageList");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-    // Ambil nilai dari input
-    const name = nameInput.value.trim();
-    const message = messageInput.value.trim();
+        //ambil input dari form
+        const name = nameInput.value.trim();
+        const message = messageInput.value.trim();
 
-    if (name && message) {
-      // Buat elemen li baru
-      const li = document.createElement("li");
-      li.classList.add("p-2", "bg-white", "border", "rounded");
-      li.innerHTML = `<strong>${name}:</strong> ${message}`;
+        if (name && message) {
+            //elemen list buat message
+            const li = document.createElement("li");
+            li.classList.add("p-2", "bg-white", "border", "rounded");
+            li.innerHTML = `<strong>${name}:</strong> ${message}`;
 
-      // Masukkan ke list
-      messageList.appendChild(li);
+            //input ke dalam daftar pesan
+            messageList.appendChild(li);
 
-      // Reset form
-      form.reset();
-    }
-  });
+            //reset form
+            form.reset();
+        }
+    });
 });
 
 
-// Animasi fade-in saat scroll
+//animasi fade-in scroll
 const faders = document.querySelectorAll('.fade-in');
 
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
 }, { threshold: 0.1 });
 
 faders.forEach(fade => observer.observe(fade));
 
-// Cek apakah gambar background termuat
+//cek bg (f12)
 const bgImg = new Image();
 bgImg.src = 'img/pixel-background.png';
 
-bgImg.onload = function() {
+bgImg.onload = function () {
     console.log('%c Background pixel art berhasil dimuat!', 'color: green; font-weight: bold;');
 };
 
-bgImg.onerror = function() {
+bgImg.onerror = function () {
     console.error('Background pixel art gagal dimuat! Periksa path atau nama file.');
 };
